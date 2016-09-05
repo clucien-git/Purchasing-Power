@@ -1,0 +1,96 @@
+<!-- <author>Djordje Nedeljkovic</author> -->
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        var forceUpdateInd = false;
+        if (!forceUpdateInd) {
+            var appVersion = "";
+            $.serverCall({
+                url: PPConfig.serverUrl + '/mobile-version.json',
+                type: 'GET',
+                async: true,
+                loaderText: 'loading orders...',
+                success: function (response) {
+                    if (response.forceUpdate) {
+                        var appversionfromserver = response.appVersion;
+                        cordova.getAppVersion().then(function (version) {
+                            appVersion = version;
+                            if (appversionfromserver > appVersion && response.forceUpdate) {
+                                forceUpdateInd = true;
+                                navigator.notification.alert(
+                                        "Good news! A new version of app is available on the appStore.",  // message
+                                        openAppStore,         // callback
+                                        'New Version',            // title
+                                        'Update'                  // buttonName
+                                );
+                            }
+
+                        });
+                    }
+
+                }
+            });
+
+        }
+        function openAppStore() {
+            if (device.platform == "iOS") {
+                window.location = 'itms-apps://itunes.apple.com/us/app/purchasing-power/id934544219';
+            }
+            else {
+                window.location = 'market://details?id=com.purchasingpower.mobile';
+            }
+        }
+
+        if (!forceUpdateInd && device.platform == "iOS") {
+            touchid.checkSupport(
+                    function () {
+                        var username = store.get("username");
+                        var password = store.get("password");
+
+                        if (store.get("isSuccessLogin")) {
+                            if (username != "" && password != "" && document.getElementById('touchID').checked) {
+                                touchid.authenticate(
+                                        function () {
+                                            PPRouter.navigate("home");
+                                        },
+                                        function (errorMessage) {
+                                        },
+                                        "Authenticate using your finger");
+                            }
+                        }
+                    },
+                    function () {
+                        var getTouchIdLabel = document.getElementById('touchLabel');
+                        getTouchIdLabel.style.display = 'none';
+                    });
+        }
+        else {
+            var getTouchIdLabel = document.getElementById('touchLabel');
+            getTouchIdLabel.style.display = 'none';
+        }
+    }
+</script>
+<div id="preloader"></div>
+<div id="wrapper">
+    <div class="content">
+        <img id="loginLogo" src="img/ppc_logo.svg"/>
+        <input type="email" id="username" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <div class="toggleWrapper"><input type="checkbox" name="rememberMe" id="rememberMe">Remember my Username
+            &amp; Password<label for="rememberMe"></label></div>
+        <div class="toggleWrapper" id="touchLabel"><input type="checkbox" name="touchID" id="touchID">Sign in with Touch
+            ID<label for="touchID"></label>
+        </div>
+        <button id="login" class="blueBG" style="font-family:'Avenir Heavy';">Login</button>
+        <div class="forgotPW">
+            <a id="forgotPassword" href="#">Forgot Username/Password?</a>
+        </div>
+        <div class="register">
+            New to Purchasing Power?
+            <a id="registration" href="" class="button lightBlueBG">Register
+                Now</a>
+        </div>
+
+    </div>
+</div>

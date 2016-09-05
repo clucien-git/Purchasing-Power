@@ -1,0 +1,58 @@
+{
+  "orderDetails": {
+    "supportingDocuments": [
+      {
+        "status": "EMPTY",
+        "orderNumber": "00084001",
+        "name": "Confirmation of Allotment"
+      },
+      {
+        "status": "EMPTY",
+        "orderNumber": "00084001",
+        "name": "Paystub"
+      }
+    ],
+    "order": {
+      "orderType": "ORIGINAL",
+      "pricePerPayment": 44.49,
+      "fees": [
+        {
+          "amount": 3,
+          "description": "Waste Fee",
+          "typeCode": "SCREEN_FEE",
+          "feeState": "CA"
+        }
+      ],
+      "placedDate": "10/29/15 10:50:34",
+      "orderStatus": "Customer Action Required",
+      "numberOfPayments": 52,
+      "promotionalDiscount": 0,
+      "orderBalance": null,
+      "totalPriceIncludingTax": 2313.6699999999996,
+      "replacementOrderNumber": null,
+      "totalDiscounts": 0,
+      "subTotal": 2126.2,
+      "orderNumber": "00084001",
+      "totalTax": 159.47,
+      "shippingDiscount": 0,
+      "deliveryCost": 25
+    },
+    "items": [
+      {
+        "imageUrl": null,
+        "itemReturnable": false,
+        "name": "Apple MacBook Pro 13.3in Display 4GB Memory Laptop A3500S1",
+        "quantity": 1,
+        "priceTotal": 1866.39
+      },
+      {
+        "imageUrl": null,
+        "itemReturnable": false,
+        "name": "SquareTrade 3-Year Laptop Warranty Plus Accident Protection",
+        "quantity": 1,
+        "priceTotal": 259.81
+      }
+    ],
+    "consignments": null
+  }
+}

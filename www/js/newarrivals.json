@@ -1,0 +1,21 @@
+[
+   "products",
+   [
+      "product",
+      {
+         "name":"LG 60 Class 1080p 120Hz Smart LED HDTV 60LF6300",
+         "img":"https://d1ce8ljscuc16y.cloudfront.net/h41/h15/8852105887774.jpg",
+         "sku":"2693468",
+         "price":"100.98"
+      }
+   ],
+   [
+      "product",
+      {
+         "name":"HP 15 Beats Special Edition Laptop (15.6in, AMD A8, 8GB, 1TB, Red)",
+         "img":"https://d1ce8ljscuc16y.cloudfront.net/h8f/hde/8819434815518.jpg",
+         "sku":"2417959",
+         "price":"200.98"
+      }
+   ]
+]

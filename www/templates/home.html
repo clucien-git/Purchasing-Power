@@ -1,0 +1,65 @@
+<script src="js/appscripts.js"></script>
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        Util.getSearchSuggestuinList();
+    }
+</script>
+
+<div id="preloader"></div>
+<div id="menuWrapper">
+    <!-- #BeginLibraryItem "/Library/menu.lbi" -->
+    <div id="menuOverlay"></div>
+    <div id="menu">
+        <div id="menuHeader">
+            <img src="./img/logo_menu.svg"/>
+
+            <a href="#" id="signOut">Sign Out</a>
+
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="account">My Account Information</a></li>
+            <li><a href="#" id="order-status">Order History</a></li>
+            <li><a href="#" id="upload">Send Documents</a></li>
+            <li id="departments"><a href="#" id="departmentsLink">Shop Purchasing Power</a>
+                <ul>
+                </ul>
+            </li>
+
+            <li><a href="#" id="about">Contact Us</a></li>
+            <li class="child"><a href="#" id="callUs">Call Us Now</a></li>
+            <li><a href="#" id="settingMenu">Settings</a></li>
+        </ul>
+    </div>
+    <!-- #EndLibraryItem -->
+</div>
+<!-- #BeginLibraryItem "/Library/search.lbi" -->
+<div id="searchOverlay">
+    <div id="searchBar">
+        <form class="search-form">
+            <input type="text" id="searchField" placeholder="Product Search">
+        </form>
+        <a href="#" id="cancelSearch">Cancel</a>
+    </div>
+    <ul id="recentSearch" class="hidden"></ul>
+</div>
+
+<!-- #EndLibraryItem -->
+<div id="header">
+    <a href="#" id="menuLink"><img src="img/menuLink.svg"/></a>
+
+    <div id="title"></div>
+    <a href="#" id="searchLink"><img src="img/searchLink.svg"/></a>
+</div>
+<div id="wrapper" class="home">
+    <div id="heroBanners"></div>
+
+    <div id="footer">
+        <h2>Check out our New Arrivals</h2>
+
+        <div class="products" id="newArrivals" payFreq="26" catalog="AFGE"></div>
+    </div>
+</div>
+<script src="js/home_feeds.js"></script>

@@ -1,0 +1,100 @@
+<script src="js/appscripts.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        Util.getSearchSuggestuinList();
+        if (device.platform == "iOS") {
+            touchid.checkSupport(
+                    function () {
+                    },
+                    function () {
+                        var getTouchIdLabel = document.getElementById('touchLabel');
+                        getTouchIdLabel.style.display = 'none';
+                    });
+        }
+        else {
+            var getTouchIdLabel = document.getElementById('touchLabel');
+            getTouchIdLabel.style.display = 'none';
+        }
+    }
+</script>
+<div id="menuWrapper">
+    <!-- #BeginLibraryItem "/Library/menu.lbi" -->
+    <div id="menuOverlay"></div>
+    <div id="menu">
+        <div id="menuHeader">
+            <img src="./img/logo_menu.svg"/>
+
+            <a href="#" id="signOut">Sign Out</a>
+
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="account">My Account Information</a></li>
+            <li><a href="#" id="order-status">Order History</a></li>
+            <li><a href="#" id="upload">Send Documents</a></li>
+            <li id="departments"><a href="#" id="departmentsLink">Shop Purchasing Power</a>
+                <ul>
+                    <li><a href="" id="computer" target="storefront">Computers &amp; Electronics</a></li>
+                    <li><a href="" id="homeFurniture" target="storefront">Home, Furniture &amp; Patio</a></li>
+                    <li><a href="" id="tvAndEntertainment" target="storefront">TV &amp; Entertainment</a></li>
+                    <li><a href="" id="appliances" target="storefront">Appliances</a></li>
+                    <li><a href="" id="fashionAndAccessories" target="storefront">Fashion &amp; Accessories</a></li>
+                    <li><a href="" id="sports_Fitness_Rec" target="storefront">Sports, Fitness &amp; Rec</a></li>
+                    <li><a href="" id="toys_Baby_Kids" target="storefront">Toys, Baby &amp; Kids</a></li>
+                    <li><a href="" id="luggageAndTravel" target="storefront">Luggage &amp; Travel</a></li>
+                    <li><a href="" id="healthAndBeauty" target="storefront">Health &amp; Beauty</a></li>
+                    <li><a href="" id="autoAndHomeImprovment" target="storefront">Auto &amp; Home Improvment</a></li>
+                    <li><a href="" id="education" target="storefront">Education</a></li>
+                </ul>
+            </li>
+            <!--<li class="child"><a href="#" target="storefront" id="icon-slot-2">Best Sellers</a></li>-->
+            <!--<li class="child"><a href="#" id="icon-slot-1" target="storefront">New Arrivals</a></li>-->
+            <li><a href="#" id="about">Contact Us</a></li>
+            <li class="child"><a href="#" id="callUs">Call Us Now</a></li>
+            <li><a href="#" id="settingMenu">Settings</a></li>
+        </ul>
+    </div>
+    <!-- #EndLibraryItem -->
+</div>
+<!-- #BeginLibraryItem "/Library/search.lbi" -->
+<div id="searchOverlay">
+    <div id="searchBar">
+        <form class="search-form">
+            <input type="text" id="searchField" placeholder="Product Search">
+        </form>
+        <a href="#" id="cancelSearch">Cancel</a>
+    </div>
+    <ul id="recentSearch" class="hidden"></ul>
+</div>
+<!-- #EndLibraryItem -->
+<div id="header">
+    <a href="#" id="menuLink"><img src="./img/menuLink.svg"/></a>
+
+    <div id="title">Settings</div>
+    <a href="#" id="searchLink"><img src="./img/searchLink.svg"/></a>
+</div>
+<div id="wrapper">
+    <div class="stripes">
+        <div>
+            <div class="content">
+                <div class="toggleWrapper"><input type="checkbox" name="rememberMe" id="rememberMe">Remember my Username
+                    &amp; Password<label for="rememberMe"></label></div>
+                <div class="toggleWrapper" id="touchLabel"><input type="checkbox" name="touchID" id="touchID">Sign in
+                    with Touch ID<label for="touchID"></label></div>
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <a class="options" href="#" id="termofUse">Terms of Use</a>
+                <a class="options" href="#" id="privacyPolicy">Privacy Policy</a>
+
+                <div class="left">App Version</div>
+                <div class="right" id="app-version">2.1</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>

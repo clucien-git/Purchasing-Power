@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <title>Purchasing Power Mobile</title>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="default" />
+
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- js libraries -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
+    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
+    <script type="text/javascript" src="js/libs/store-min.js"></script>
+    <script type="text/javascript" src="js/libs/fastclick.js"></script>
+    <script type="text/javascript" src="js/libs/chart-new.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.formatCurrency-1.4.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/dateformat.min.js"></script>
+    <script type="text/javascript" src="js/libs/adobe_visitor.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/server-call.js"></script>
+    <script src="js/view-config.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/util.js"></script>
+
+    <!-- views -->
+    <script src="js/views/generic-view.js"></script>
+    <script src="js/views/login.js"></script>
+    <script src="js/views/home.js"></script>
+    <script src="js/views/account.js"></script>
+    <script src="js/views/upload.js"></script>
+    <script src="js/views/orderhistory.js"></script>
+    <script src="js/views/orderDetails.js"></script>
+    <script src="js/views/contactUs.js"></script>
+    <script src="js/views/resetPassword.js"></script>
+    <script src="js/views/registration.js"></script>
+    <script src="js/views/settings.js"></script>
+
+    <script src="js/ppmobile.js"></script>
+    <script type="text/javascript">
+        var idleTime = 0;
+        var AppVersion;
+        cordova.getAppVersion().then(function (version) {
+            AppVersion = version;
+        });
+        $(document).ready(function () {
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 1000); //
+
+            //Zero the idle timer on mouse movement.
+            $(this).on('touchstart', function (e) {
+               // alert('mousemove');
+                idleTime = 0;
+            });
+        });
+
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 120) { // sec
+                idleTime=0;
+                PPRouter.navigate('login');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="outer-content">
+</div>
+</body>
+</html>

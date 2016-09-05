@@ -1,0 +1,15 @@
+<div id="searchOverlay">
+	<div id="searchBar">
+	    <form>
+        <input type="text" placeholder="Product Search">
+        </form>
+    	<a href="#" id="cancelSearch">Cancel</a>
+    </div>
+    <ul id="recentSearch" class="hidden">
+    	<li><a href="#">Apple</a></li>
+    	<li><a href="#">Xbox one</a></li>
+    	<li><a href="#">television</a></li>
+    	<li><a href="#">Dell</a></li>
+    	<li><a href="#">refrigerator</a></li>
+    </ul>
+</div>

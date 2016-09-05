@@ -1,0 +1,159 @@
+<script src="js/appscripts.js"></script>
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        Util.getSearchSuggestuinList();
+    }
+</script>
+<div id="preloader"></div>
+<div id="menuWrapper">
+    <!-- #BeginLibraryItem "/Library/menu.lbi" -->
+    <div id="menuOverlay"></div>
+    <div id="menu">
+        <div id="menuHeader">
+            <img src="./img/logo_menu.svg"/>
+
+            <a href="#" id="signOut">Sign Out</a>
+
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="account">My Account Information</a></li>
+            <li><a href="#" id="order-status">Order History</a></li>
+            <li><a href="#" id="upload">Send Documents</a></li>
+            <li id="departments"><a href="#" id="departmentsLink">Shop Purchasing Power</a>
+                <ul>
+                    <li><a href="" id="computer" target="storefront">Computers &amp; Electronics</a></li>
+                    <li><a href="" id="homeFurniture" target="storefront">Home, Furniture &amp; Patio</a></li>
+                    <li><a href="" id="tvAndEntertainment" target="storefront">TV &amp; Entertainment</a></li>
+                    <li><a href="" id="appliances" target="storefront">Appliances</a></li>
+                    <li><a href="" id="fashionAndAccessories" target="storefront">Fashion &amp; Accessories</a></li>
+                    <li><a href="" id="sports_Fitness_Rec" target="storefront">Sports, Fitness &amp; Rec</a></li>
+                    <li><a href="" id="toys_Baby_Kids" target="storefront">Toys, Baby &amp; Kids</a></li>
+                    <li><a href="" id="luggageAndTravel" target="storefront">Luggage &amp; Travel</a></li>
+                    <li><a href="" id="healthAndBeauty" target="storefront">Health &amp; Beauty</a></li>
+                    <li><a href="" id="autoAndHomeImprovment" target="storefront">Auto &amp; Home Improvment</a></li>
+                    <li><a href="" id="education" target="storefront">Education</a></li>
+                </ul>
+            </li>
+            <!--<li class="child"><a href="#" target="storefront" id="icon-slot-2">Best Sellers</a></li>-->
+            <!--<li class="child"><a href="#" id="icon-slot-1" target="storefront">New Arrivals</a></li>-->
+            <li><a href="#" id="about">Contact Us</a></li>
+            <li class="child"><a href="#" id="callUs">Call Us Now</a></li>
+            <li><a href="#" id="settingMenu">Settings</a></li>
+        </ul>
+    </div>
+    <!-- #EndLibraryItem -->
+</div>
+<!-- #BeginLibraryItem "/Library/search.lbi" -->
+<div id="searchOverlay">
+    <div id="searchBar">
+        <form class="search-form">
+            <input type="text" id="searchField" placeholder="Product Search">
+        </form>
+        <a href="#" id="cancelSearch">Cancel</a>
+    </div>
+    <ul id="recentSearch" class="hidden"></ul>
+</div>
+<!-- #EndLibraryItem -->
+<div id="header" data-role="header">
+    <a href="#" id="menuLink"><img src="./img/menuLink.svg"/></a>
+
+    <div id="title">Order Detail <span class="back-button-order-details goBack" id="back-button-order-details"><img
+            src="./img/backLink.svg"/></span></div>
+
+    <a href="#" id="searchLink"><img src="./img/searchLink.svg"/></a>
+</div>
+
+<div id="wrapper" data-role="content">
+    <div class="alertBlock" id="alertBlock" style="display:none">
+        <div class="content">
+
+            <h2>Customer Action Required</h2>
+
+            <p>We still need some documents from you before we can fulfill your order.</p>
+
+            <p>You can use your device's camera to easily send the documents.</p>
+            <a href="upload.html" class="uploadCTA" id="senddocumentsnow">Send Documents Now</a>
+
+        </div>
+    </div>
+    <div class="stripes">
+        <div>
+            <h2 class="content orderNumber">Order # <span class="order-number" id="order-number"></span></h2>
+        </div>
+        <div>
+            <div class="content">
+                <dl>
+                    <dt>Order Date</dt>
+                    <dd class="order-date" id="order-date"></dd>
+                    <dt>Order Status</dt>
+                    <dd class="order-status" id="orderStatus"></dd>
+                    <dt>Per Payment Amount</dt>
+                    <dd class="order-price-per-payment" id="order-price-per-payment"></dd>
+                    <dt>Order Balance</dt>
+                    <dd id="orderBalance"></dd>
+                    <dd></dd>
+                </dl>
+                <dl id="moreDetails" class="hidden">
+                    <!--<dt>Subtotal</dt>-->
+                    <!--<dd class="order-subtotal" id="order-subtotal"></dd>-->
+                    <!--<dt>Shipping &amp; Handling</dt><dd class="order-shipping-handling" id="order-shipping-handling"></dd>-->
+                    <!--<dt>Sales Tax</dt><dd class="order-sales-tax" id="order-sales-tax"></dd>-->
+
+
+                    <!--<dt>Price / Payment</dt><dd class="price-per-payment" id="price-per-payment"></dd>-->
+
+                    <!--<dt>Number of Payments</dt><dd class="number-of-payments" id="number-of-payments"></dd>-->
+
+                    <!--<dt>Total</dt><dd class="order-total" id="order-total"></dd>-->
+                </dl>
+                <dl id="moreDetails2" class="hidden separator"></dl>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <a href="#" id="moreLink" class="options link">more details</a>
+        <a href="#" id="lessLink" class="options link hidden">less details</a>
+    </div>
+
+    <div class="content">
+        <h2 class="center">Your Order</h2>
+        <div id="returnLink">
+
+        </div>
+        <div id="items-holder">
+        </div>
+        <ul class="orderBox" id="order-item-template" style="display: none;">
+            <li>
+                <div class="productName item-name"></div>
+                <span class="item-image"><img width="60" height="60" src="./img/missing_product.jpg"></img></span>
+
+                <div class="productInfo" id="consignmentInfo">
+                    <div class="item-price"></div>
+                    <div id="paymentTotal"></div>
+                    <div ><span id="perpaymentTotal"></span>/payment</div>
+                    <!--<div class="shipping" id="shipping"></div>-->
+                    <!--<div><a href="#" target="tracking" id="tracking"></a></div>-->
+
+                    <div id="shippingBlock" class="shipping"><span id="shipping"></span>
+                        <span><a href="#" target="tracking" id="tracking"></a></span>
+                    </div>
+                    <div id="order-item-Status"></div>
+                    <div id="returnStatus"></div>
+
+                </div>
+                <div class="clear">
+                    <ul class="productChild">
+                        <li id="childProductName"></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>

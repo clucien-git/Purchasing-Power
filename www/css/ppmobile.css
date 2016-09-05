@@ -1,0 +1,240 @@
+* {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+@font-face {
+    font-family:"avenir-black";
+    src: url("./fonts/AvenirLTStd-Medium.otf");
+}
+
+div[data-role ="page"], .ui-btn {
+	font-family: avenir-black;
+}
+
+div[data-role="content"] > h1 {
+	background-color: #fed100;
+	color: #0073cf;
+	margin: 0px !important;
+	text-align: center;
+	padding: 2%;
+}
+div.login-container {
+	background: linear-gradient(top, #0073cf 40%, #a3dbe8 100%);
+	background: -webkit-linear-gradient(top, #0073cf 40%, #a3dbe8 100%);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+	color: white;
+	height: 100%;
+}
+
+div.ui-header {
+	background-color: #0073cf !important;
+	padding: 2% !important;
+}
+
+div[data-role="content"] {
+	background-color: white;
+}
+
+div.back-button {
+	background:  url(./../img/back_button.png) no-repeat;
+	height: 38px;
+	width: 88px;
+	float: left;
+	margin-top: 3%;
+}
+
+div.logo-holder {
+	width: 35%;
+	height: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ui-header .ui-btn-left {
+	margin-top: 5%;
+}
+
+.ui-field-contain {
+	padding: 8px !important;
+}
+
+#login, #home, #back, #resetPassword, #register {
+	background-color: #e38e00 ;
+	color: white;
+}
+
+#login {
+	background-color: #EBB700;
+	color: #0073cf;
+}
+
+#registration {
+	margin-top: 50px;
+	background-color: #81bd00;
+	color: #0073cf;
+}
+
+#forgotPassword {
+	color: white;
+	text-align: center;
+	margin-top: 5%;
+}
+
+#carousel .item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+div.upload-button {
+	background:  url(./../img/upload.jpg) no-repeat;
+	height: 52px;
+	width: 52px;
+}
+
+div#upload-holder, div#orderHolder {
+	-webkit-overflow-scrolling: touch; 
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+.upload-document-name {
+	font-size: 1em;
+	font-weight: bold;
+	white-space: normal;
+}
+
+.upload-document-text {
+	padding: 3%;
+}
+
+div.account-status-holder, div.upload-document-holder, div.about-holder, div.order-details-holder {
+	padding: 3%;
+}
+
+div.upload-document-holder-left {
+	width: 75%;
+	float: left;
+}
+
+div.upload-document-holder-right {
+	width: 25%;
+	float: right;
+}
+
+div.account-status-holder div.ui-grid-solo{
+	padding: 1%;
+}
+
+div.order-holder {
+	padding: 3%;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.gray-text {
+	color: #818a8f;
+}
+
+.blue-text {
+	color: #0073cf;
+}
+
+.bolded-text {
+	font-weight: bold;
+}
+hr.separator { 
+    border: 0; 
+    height: 1px;
+    clear: both;
+}
+hr.separator:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.separator:after {
+    content:'';
+    height: 0.5em;
+    top: 1px;
+}
+hr.separator, hr.separator:before {
+    background: radial-gradient(ellipse at center, #0073cf 0%,#fff 75%);
+}
+
+hr.separator:after {
+    background: #0073cf;
+}
+
+.nav-home-page .ui-btn { 
+	padding-top: 40px !important;
+	font-size: 10px !important;
+	color: white !important;
+	background-color: #0073cf !important;
+}
+.nav-home-page .ui-btn:after {
+	width: 30px!important;
+	height: 30px!important;
+	margin-left: -15px !important;
+	box-shadow: none!important;
+	border-radius: 0 !important;
+    background-color: transparent;
+}
+
+#icon-slot-1:after {
+	background-image: url(./../img/icon_star.png);
+	background-size: 24px 22px;
+}
+#icon-slot-2:after {
+	background-image: url(./../img/icon_calendar.png);
+	background-size: 24px 22px;
+}
+#about:after { 
+	background-image: url(./../img/icon_about.png);
+	background-size: 24px 22px; 
+}
+#logout:after { 
+	background-image: url(./../img/icon_quit.png);
+	background-size: 24px 22px; 
+}
+
+.col-30per {
+	width: 30%;
+	float: left;
+}
+
+.col-50per {
+	width: 50%;
+	float: left;
+}
+
+.col-70per {
+	width: 70%;
+	float: left;
+}
+
+.font-150per { 
+	font-size: 1.5em;	
+}
+
+.font-60per { 
+	font-size: 0.6em;
+	line-height: 20px;	
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.item-image img {
+	width: 70px;
+	height: 70px;
+}
+
+.view-details {
+	margin-top: 10px;
+	background-image: url("./../img/view_details.png");
+	background-repeat: no-repeat;
+	padding-left: 30px;
+}

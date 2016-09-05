@@ -1,0 +1,116 @@
+<script src="js/appscripts.js"></script>
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        Util.getSearchSuggestuinList();
+    }
+</script>
+<div id="preloader"></div>
+<div id="menuWrapper">
+    <!-- #BeginLibraryItem "/Library/menu.lbi" -->
+    <div id="menuOverlay"></div>
+    <div id="menu">
+        <div id="menuHeader">
+            <img src="./img/logo_menu.svg"/>
+
+            <a href="#" id="signOut">Sign Out</a>
+
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="account">My Account Information</a></li>
+            <li><a href="#" id="order-status">Order History</a></li>
+            <li><a href="#" id="upload">Send Documents</a></li>
+            <li id="departments"><a href="#" id="departmentsLink">Shop Purchasing Power</a>
+                <ul>
+                    <li><a href="" id="computer" target="storefront">Computers &amp; Electronics</a></li>
+                    <li><a href="" id="homeFurniture" target="storefront">Home, Furniture &amp; Patio</a></li>
+                    <li><a href="" id="tvAndEntertainment" target="storefront">TV &amp; Entertainment</a></li>
+                    <li><a href="" id="appliances" target="storefront">Appliances</a></li>
+                    <li><a href="" id="fashionAndAccessories" target="storefront">Fashion &amp; Accessories</a></li>
+                    <li><a href="" id="sports_Fitness_Rec" target="storefront">Sports, Fitness &amp; Rec</a></li>
+                    <li><a href="" id="toys_Baby_Kids" target="storefront">Toys, Baby &amp; Kids</a></li>
+                    <li><a href="" id="luggageAndTravel" target="storefront">Luggage &amp; Travel</a></li>
+                    <li><a href="" id="healthAndBeauty" target="storefront">Health &amp; Beauty</a></li>
+                    <li><a href="" id="autoAndHomeImprovment" target="storefront">Auto &amp; Home Improvment</a></li>
+                    <li><a href="" id="education" target="storefront">Education</a></li>
+                </ul>
+            </li>
+            <!--<li class="child"><a href="#" target="storefront" id="icon-slot-2">Best Sellers</a></li>-->
+            <!--<li class="child"><a href="#" id="icon-slot-1" target="storefront">New Arrivals</a></li>-->
+            <li><a href="#" id="about">Contact Us</a></li>
+            <li class="child"><a href="#" id="callUs">Call Us Now</a></li>
+            <li><a href="#" id="settingMenu">Settings</a></li>
+        </ul>
+    </div>
+    <!-- #EndLibraryItem -->
+</div>
+<!-- #BeginLibraryItem "/Library/search.lbi" -->
+<div id="searchOverlay">
+    <div id="searchBar">
+        <form class="search-form">
+            <input type="text" id="searchField" placeholder="Product Search">
+        </form>
+        <a href="#" id="cancelSearch">Cancel</a>
+    </div>
+    <ul id="recentSearch" class="hidden"></ul>
+</div>
+<!-- #EndLibraryItem -->
+<div id="header" data-role="header">
+    <a href="#" id="menuLink"><img src="./img/menuLink.svg"/></a>
+
+    <div id="title">My Account</div>
+    <a href="#" id="searchLink"><img src="./img/searchLink.svg"/></a>
+</div>
+<div id="wrapper">
+    <div class="stripes">
+        <div>
+            <div class="content">
+                <dl class="myAccount" id="my-account">
+                    <dt>Available Spending Limit</dt>
+                    <dd class="asl" id="available-limit"></dd>
+                    <dt>Current Balance</dt>
+                    <dd id="current-balance"></dd>
+                    <!-- <dd>id="current-balance"$1234.56</dd> -->
+                    <dt>Total Spending Limit</dt>
+                    <dd id="total-limit"></dd>
+                    <!-- <dd>$6543.21</dd> -->
+                </dl>
+                <a class="options link clear" href=""
+                   target="storefront" id="viewAccountStatement">view account statement</a>
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <dl class="myAccount">
+                    <dt id="myRewardsTitle">My Rewards</dt>
+                    <dd class="asl" id="myRewardedPoint"></dd>
+                </dl>
+                <!--<a class="options link clear" href=""-->
+                   <!--target="storefront" id="referFriend">refer a friend</a>-->
+            </div>
+        </div>
+        <div>
+            <div class="content">
+                <dl class="myAccountPhone">
+                    <dt>Name</dt>
+                    <dd id="name"></dd>
+                    <dt>Email</dt>
+                    <dd id="email"></dd>
+                    <!--<dt id="phoneType1">Phone (Mobile)</dt>-->
+                    <!--<dd id="phoneMobile"></dd>-->
+                    <!--<dt id="phoneType2">Phone (Home)</dt>-->
+                    <!--<dd id="phoneHome"></dd>-->
+                </dl>
+                <a class="options link clear" href=""
+                   target="storefront" id="updateContactInfo">update contact information</a>
+                <a class="options link clear" href=""
+                   target="storefront" id="updateEmail">update email</a>
+                <a class="options link clear" href=""
+                   target="storefront" id="updatePassword">update password</a>
+            </div>
+        </div>
+    </div>
+</div>
