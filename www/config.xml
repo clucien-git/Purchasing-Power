@@ -144,8 +144,10 @@
     <!--<splash src="Default-667h@2x.png" platform="ios" width="750" height="1334" />-->
     <!--<splash src="Default-Portrait-736h@3x.png" platform="ios" width="1242" height="2208" />-->
 
-    <gap:splash src="res/ios/iphone6/Default-667h@2x.png" gap:platform="ios" width="750" height="1334" />
-    <gap:splash src="res/ios/iphone6/Default-Portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-667h@2x.png" gap:platform="ios" width="750" height="1334" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-736h@3x.png" gap:platform="ios" width="1242" height="2208" />
+    <gap:splash src="res/screen/ios/screen-iphone-landscape-736h@3x.png" gap:platform="ios" width="2208" height="1242" />
+
     <!--<splash src="Default-Landscape-736h@3x.png" platform="ios" width="2208" height="1242" />-->
     <!--<gap:splash src="res/screen/ios/Default-667h.png" gap:platform="ios" width="750" height="1334"/>-->
     <!--<gap:splash src="res/screen/ios/Default-736h.png" gap:platform="ios" width="1242" height="2208"/>-->
