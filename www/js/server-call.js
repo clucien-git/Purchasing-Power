@@ -42,11 +42,8 @@
 
 
             //add credentials
-            if (store.get('username')) {
-                options.url = options.url + '?usr=' + store.get('username') + '&tok=' + Util.makeToken();
-                console.log(options.url);
-
-            }
+            options.url = options.url + '?usr=' + store.get('username') + '&tok=' + Util.makeToken();
+            console.log(options.url);
 
             // error handler;
             // note that this kind of errors are happening due to network failure or server side errors
@@ -65,7 +62,8 @@
                 } else if (typeof errorCallBack === 'function') {
                     errorCallBack();
                 } else {
-                    //alert("xhr.status:" + xhr.status + "|status: " + status + "|error:" + error)
+                    console.log(error);
+                    alert("xhr.status:" + xhr.status + "|status: " + status + "|error:" + error)
                     //Server side error have happened or network failure.
                     navigator.notification.alert(
                         'Sorry, there was a problem connecting to the server. Please try again.',
