@@ -90,6 +90,7 @@ var loginView = PPGenericView.extend({
         }
 
         //test username and password
+        if (username) {
         $.serverCall({
             url: PPConfig.serverUrl + '/login.json',
             type: 'GET',
@@ -97,7 +98,7 @@ var loginView = PPGenericView.extend({
             loaderText: 'logging in...',
             success: function (response) {
                 store.set("isSuccessLogin", true);
-                store.set('clientPhone',response.clientPhone);
+                store.set('clientPhone', response.clientPhone);
                 store.set("userFirstName", response.name);
                 store.set("payPeriod", response.payPeriod);
                 store.set("userGroup", response.userGroup);
@@ -105,6 +106,7 @@ var loginView = PPGenericView.extend({
                 PPRouter.navigate("home");
             }
         });
+    }
     },
     gotToforgotPassword: function () {
         var actionUrl = PPConfig.storeFrontRegistrationUrl + '/pw/request';

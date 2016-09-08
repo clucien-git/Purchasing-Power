@@ -63,6 +63,7 @@
                     errorCallBack();
                 } else {
                     console.log(error);
+                    alert(options.url);
                     alert("xhr.status:" + xhr.status + "|status: " + status + "|error:" + error)
                     //Server side error have happened or network failure.
                     navigator.notification.alert(
