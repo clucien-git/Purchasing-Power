@@ -42,7 +42,9 @@
 
 
             //add credentials
-            options.url = options.url + '?usr=' + store.get('username') + '&tok=' + Util.makeToken();
+            if (store.get('username') != '' || store.get('username') != undefined) {
+                options.url = options.url + '?usr=' + store.get('username') + '&tok=' + Util.makeToken();
+            }
             console.log(options.url);
 
             // error handler;
