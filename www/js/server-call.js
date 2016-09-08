@@ -42,10 +42,11 @@
 
 
             //add credentials
-            if (store.get('username') != '') {
+            if (store.get('username')) {
                 options.url = options.url + '?usr=' + store.get('username') + '&tok=' + Util.makeToken();
+                console.log(options.url);
+
             }
-            console.log(options.url);
 
             // error handler;
             // note that this kind of errors are happening due to network failure or server side errors
