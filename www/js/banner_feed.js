@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "https://s3.amazonaws.com/ppc-mobile-app-2/home/slot1/list.json?jsoncallback=?";
+    var url = "https://s3.amazonaws.com/ppc-mobile-app-2/home/slot1/list.json?jsoncallback=";
 
     $.ajax({
         type: 'GET',

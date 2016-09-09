@@ -15,6 +15,7 @@
                         var appversionfromserver = response.appVersion;
                         cordova.getAppVersion().then(function (version) {
                             appVersion = version;
+
                             if (appversionfromserver > appVersion && response.forceUpdate) {
                                 forceUpdateInd = true;
                                 navigator.notification.alert(

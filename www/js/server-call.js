@@ -40,9 +40,9 @@
                 }
             }
 
-
             //add credentials
-            options.url = options.url + '?usr=' + store.get('username') + '&tok=' + Util.makeToken();
+            options.url = options.url +'?usr=' + store.get('username') + '&tok=' + Util.makeToken() + '&ver=' + store.get('appVersion');
+            alert(options.url);
             console.log(options.url);
 
             // error handler;

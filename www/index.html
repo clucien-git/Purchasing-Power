@@ -47,12 +47,18 @@
 
     <script src="js/ppmobile.js"></script>
     <script type="text/javascript">
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
         var idleTime = 0;
         var AppVersion;
         cordova.getAppVersion().then(function (version) {
             AppVersion = version;
+            alert(version);
+            store.set('appVersion',AppVersion);
         });
-        $(document).ready(function () {
+
             //Increment the idle time counter every minute.
             var idleInterval = setInterval(timerIncrement, 1000); //
 
