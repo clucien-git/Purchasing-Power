@@ -81,7 +81,7 @@
 	<gap:plugin name="cordova-plugin-touchid" version="0.3.1" source="npm"/>
 
     <!-- Private Plugins -->
-    <gap:plugin name="com.purchasingpower.inappbrowser" version="5.0.0" source="pgb"/>
+    <!--<gap:plugin name="com.purchasingpower.inappbrowser" version="5.0.0" source="pgb"/>-->
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/icon.png"/>
     <icon src="res/icon/android/36.png" gap:platform="android" gap:qualifier="ldpi"/>
