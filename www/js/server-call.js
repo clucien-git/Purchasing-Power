@@ -62,9 +62,7 @@
                 } else if (typeof errorCallBack === 'function') {
                     errorCallBack();
                 } else {
-                    console.log(error);
-                    alert(options.url);
-                    alert("xhr.status:" + xhr.status + "|status: " + status + "|error:" + error)
+                    //alert("xhr.status:" + xhr.status + "|status: " + status + "|error:" + error)
                     //Server side error have happened or network failure.
                     navigator.notification.alert(
                         'Sorry, there was a problem connecting to the server. Please try again.',
