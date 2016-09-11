@@ -63,7 +63,7 @@
 
     <!-- Core plugins -->
 
-    <!--<gap:plugin name="cordova-plugin-camera" version="2.2.0"/>-->
+    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
     <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="cordova-plugin-file" version="4.2.0" source="npm"/>
     <gap:plugin name="cordova-plugin-file-transfer" source="npm"/>
