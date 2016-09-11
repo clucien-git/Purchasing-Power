@@ -27,7 +27,7 @@ $(document).ready(function(){
     function callFeed() {
 
         var xmlhttp = new XMLHttpRequest();
-        var url = "https://s3.amazonaws.com/ppc-mobile-app-2/home/slot1/list.json?jsoncallback=";
+        var url = "https://s3.amazonaws.com/ppc-mobile-app-2/home/slot1/list.json?jsoncallback=?";
 
         $.serverCall({
             type: 'GET',
@@ -100,7 +100,7 @@ $(document).ready(function(){
         if (catalog == "TWC") {var userGroup = "17";};
         if (catalog == "TYSON") {var userGroup = "18";};
 
-        var url = "https://s3.amazonaws.com/platform-extension/widgets/json/Newarrivals/catalog" + userGroup + "/jsonoutput.json?jsoncallback=";
+        var url = "https://s3.amazonaws.com/platform-extension/widgets/json/Newarrivals/catalog" + userGroup + "/jsonoutput.json?jsoncallback=?";
         $.serverCall({
             type: 'GET',
             url: url,

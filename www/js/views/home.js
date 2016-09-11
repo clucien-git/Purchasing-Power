@@ -64,62 +64,62 @@ var homeView = PPGenericView.extend({
     },
     homeFurnitureAndPatio: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Home%2C-Furniture-%26-Patio/c/15_home_furniture_patio';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },//Appliances
     tvAndEntertainment: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/TV-%26-Entertainment/c/15_tventertainment';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },
     appliances: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Appliances/c/15_appliances';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(actionUrl);
         return false;
     },
     fashionAndAccessories: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Fashion-%26-Accessories/c/15_fashion_accessories';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },
     sports_Fitness_Rec: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Sports%2C-Fitness-%26-Rec/c/15_fitness';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
 
     },
     toys_Baby_Kids: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Toys%2C-Baby-%26-Kids/c/15_toys_baby_kids';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },
     luggageAndTravel: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Luggage-%26-Travel/c/15_luggage_travel';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(actionUrl);
         return false;
     },
     healthAndBeauty: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Health-%26-Beauty/c/15_health_beauty';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },
     autoAndHomeImprovment: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/Auto-%26-Home-Improvement/c/15_auto_home_improvement';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },
     education: function () {
         var actionUrl = PPConfig.storeFrontImageUrl + '/store/All/-Education/c/15_education';
-        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=slideout"));
+        var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=home"));
         Util.safariRedirectionAlert(url);
         return false;
     },

@@ -64,7 +64,6 @@
     <!-- Core plugins -->
 
     <!--<gap:plugin name="cordova-plugin-camera" version="2.2.0"/>-->
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="cordova-plugin-file" version="4.2.0" source="npm"/>
     <gap:plugin name="cordova-plugin-file-transfer" source="npm"/>
@@ -81,7 +80,7 @@
 	<gap:plugin name="cordova-plugin-touchid" version="0.3.1" source="npm"/>
 
     <!-- Private Plugins -->
-    <!--<gap:plugin name="com.purchasingpower.inappbrowser" version="5.0.0" source="pgb"/>-->
+    <gap:plugin name="com.purchasingpower.inappbrowser" version="5.0.0" source="pgb"/>
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/icon.png"/>
     <icon src="res/icon/android/36.png" gap:platform="android" gap:qualifier="ldpi"/>
