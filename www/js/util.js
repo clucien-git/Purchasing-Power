@@ -186,7 +186,7 @@ var Util = {
                 returnURL = returnURL + "&ver=" + AppVersion;
             }
         }
-        returnURL = returnURL + "&user=" + username + "&pwd=" + password;
+        returnURL = returnURL + "&user=" + username + "&pwd=" + password + "&ver=" + store.get('appversion');
         return returnURL;
     },
     doNotHaveCredentials: function () {

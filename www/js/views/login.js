@@ -109,6 +109,7 @@ var loginView = PPGenericView.extend({
     gotToforgotPassword: function () {
         var actionUrl = PPConfig.storeFrontRegistrationUrl + '/pw/request';
         var url = encodeURI(PPConfig.storeFrontLoginUrl + Util.createFastLoginCredentials(actionUrl,"chn=app&scn=login"));
+        alert(url);
         Util.safariRedirectionAlert(url);
         return false;
         //if(device.platform == "iOS" && parseInt(device.version) < 9) {
